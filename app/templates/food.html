@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form active="{%url 'food'%}" method="GET">
+      <p>What would you like to order?</p>
+      {{ form.as_p }}
+      <button>Order</button>
+    </form>
+    {%if burgers >= 0 and fries >= 0 and drinks >= 0 %}
+    <p>Burgers: {{burgers}}</p>
+    <br />
+    <p>Fries: {{fries}}</p>
+    <br />
+    <p>Drinks: {{drinks}}</p>
+    <br />
+    <p>Total: {{total}}</p>
+    {% else %}
+    <p>There was an invalid input! Please try again!</p>
+    {% endif %}
+    
+</body>
+</html>

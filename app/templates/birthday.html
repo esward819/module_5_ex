@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{%url 'birthday'%}" method="GET">
+      <p>What is your birthyear?</p>
+      {{ form.as_p }}
+      <button>Submit</button>
+    </form>
+    {% if answer > 0 %}
+    <p>You will be {{answer}} in 2050!</p>
+    {% else %}
+    <p>That is not a valid birthyear!</p>
+    {% endif %}
+</body>
+</html>

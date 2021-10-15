@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form active="{%url 'hundred'%}" method="GET">
+      {{ form.as_p }}
+      <button>Submit</button>
+    </form>
+    {% if number >= 90 and number <= 110 %}
+    <p>That number is close to 100!</p>
+    {% elif number >= 190 and number <= 210 %}
+    <p>That number is close to 200!</p>
+    {% else %}
+    <p>That number is not close to 100 or 200!</p>
+    {% endif %}
+</body>
+</html>
